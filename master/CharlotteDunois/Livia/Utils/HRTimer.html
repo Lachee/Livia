@@ -96,6 +96,10 @@
         
     
 
+            <div class="description">
+            <p>Provides a simple interface to a timer.</p>                                                
+        
+                    </div>
     
     
     
@@ -115,7 +119,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    integer
+                    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getResolution">getResolution</a>()
@@ -140,7 +144,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_stop">stop</a>()
         
-                                            <p>Stops the timer and returns the elapsed time in their respective time unit.</p>                </div>
+                                            <p>Stops the timer and returns the elapsed time, in nanoseconds.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -150,7 +154,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_time">time</a>()
         
-                                            <p>Returns the elapsed time in their respective time unit.</p>                </div>
+                                            <p>Returns the elapsed time since the last <code>time</code> call, in nanoseconds.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -161,7 +165,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Utils/HRTimer.php#L22">line 22</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Utils/HRTimer.php#L25">line 25</a></div>
         <code>                    
     <strong>__construct</strong>()
         </code>
@@ -186,8 +190,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getResolution">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Utils/HRTimer.php#L35">line 35</a></div>
-        <code>                    integer
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Utils/HRTimer.php#L38">line 38</a></div>
+        <code>                    int
     <strong>getResolution</strong>()
         </code>
     </h3>
@@ -205,7 +209,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>integer</td>
+            <td>int</td>
             <td></td>
         </tr>
     </table>
@@ -220,7 +224,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_start">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Utils/HRTimer.php#L43">line 43</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Utils/HRTimer.php#L46">line 46</a></div>
         <code>                    void
     <strong>start</strong>()
         </code>
@@ -254,7 +258,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_stop">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Utils/HRTimer.php#L57">line 57</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Utils/HRTimer.php#L60">line 60</a></div>
         <code>                    int
     <strong>stop</strong>()
         </code>
@@ -264,7 +268,7 @@
     
 
                     <div class="method-description">
-                                    <p>Stops the timer and returns the elapsed time in their respective time unit.</p>                                                                
+                                    <p>Stops the timer and returns the elapsed time, in nanoseconds.</p>                                                                
         
                             </div>
                 <div class="tags">
@@ -288,7 +292,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_time">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Utils/HRTimer.php#L79">line 79</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Utils/HRTimer.php#L82">line 82</a></div>
         <code>                    int
     <strong>time</strong>()
         </code>
@@ -298,7 +302,7 @@
     
 
                     <div class="method-description">
-                                    <p>Returns the elapsed time in their respective time unit.</p>                                                                
+                                    <p>Returns the elapsed time since the last <code>time</code> call, in nanoseconds.</p>                                                                
         
                             </div>
                 <div class="tags">
