@@ -39,10 +39,10 @@ class LiviaClient extends \CharlotteDunois\Yasmin\Client {
      * )
      * </pre>
      *
-     * @param array                           $options  Any Client Options.
      * @param \React\EventLoop\LoopInterface  $loop
+     * @param array                           $options  Any Client Options.
      */
-    function __construct(array $options = array(), ?\React\EventLoop\LoopInterface $loop = null) {
+    function __construct(?\React\EventLoop\LoopInterface $loop = null, array $options = array()) {
         if(!\array_key_exists('commandPrefix', $options)) {
             $options['commandPrefix'] = 'l$';
         }
