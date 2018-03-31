@@ -90,7 +90,8 @@
     </div>
 
     <p>    class
-    <strong>CommandDispatcher</strong>        (<a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php" target="_blank">View source</a>)
+    <strong>CommandDispatcher</strong>        implements
+        <a href="https://secure.php.net/Serializable" target="_blank">Serializable</a>        (<a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php" target="_blank">View source</a>)
 </p>
 
         
@@ -156,6 +157,16 @@
                                             <p>Removes an inhibitor.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serialize">serialize</a>()
+        
+                                            <p>Serializes the class.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -164,7 +175,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_addInhibitor">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L57">line 57</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L84">line 84</a></div>
         <code>                    <abbr title="CharlotteDunois\Livia\$this">$this</abbr>
     <strong>addInhibitor</strong>(callable $inhibitor)
         </code>
@@ -206,7 +217,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_handleMessage">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L85">line 85</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L112">line 112</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>handleMessage</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr> $message, <abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr> $oldMessage = null)
         </code>
@@ -253,7 +264,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_removeInhibitor">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L70">line 70</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L97">line 97</a></div>
         <code>                    <abbr title="CharlotteDunois\Livia\$this">$this</abbr>
     <strong>removeInhibitor</strong>(callable $inhibitor)
         </code>
@@ -281,6 +292,38 @@
                     <table class="table table-condensed">
         <tr>
             <td><abbr title="CharlotteDunois\Livia\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serialize">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L57">line 57</a></div>
+        <code>                    string
+    <strong>serialize</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Serializes the class.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
             <td></td>
         </tr>
     </table>
