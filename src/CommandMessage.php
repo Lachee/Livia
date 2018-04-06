@@ -224,7 +224,7 @@ class CommandMessage extends \CharlotteDunois\Yasmin\Models\ClientBase {
                 $promise = $this->command->run($this, $args, ($this->patternMatches !== null));
                 
                 if($promise instanceof \GuzzleHttp\Promise\PromiseInterface) {
-                    $promise = new \React\Promise\Promise(function (callable $resolve, callable $reject) use (&$promise) {
+                    $promise = new \React\Promise\Promise(function (callable $resolve, callable $reject) use ($promise) {
                         $promise->then($resolve, $reject);
                     });
                 } elseif(!($promise instanceof \React\Promise\PromiseInterface)) {
@@ -295,8 +295,6 @@ class CommandMessage extends \CharlotteDunois\Yasmin\Models\ClientBase {
      * @throws \RangeException|\InvalidArgumentException
      */
     protected function respond(string $type, string $content, array $options = array(), bool $fromEdit = false) {
-        $shouldEdit = (!empty($this->responses) && $fromEdit === false && empty($options['files']));
-        
         if($type === 'reply' && $this->message->channel->type === 'dm') {
             $type = 'plain';
         }
@@ -310,6 +308,7 @@ class CommandMessage extends \CharlotteDunois\Yasmin\Models\ClientBase {
         }
         
         $channelID = $this->getChannelIDOrDM($this->message->channel);
+        $shouldEdit = (!empty($this->responses) && (($type === 'direct' && !empty($this->responses['dm'])) || ($type !== 'direct' && !empty($this->responses[$channelID]))) && $fromEdit === false && empty($options['files']));
         
         switch($type) {
             case 'plain':
@@ -332,7 +331,7 @@ class CommandMessage extends \CharlotteDunois\Yasmin\Models\ClientBase {
             break;
             case 'direct':
                 if($shouldEdit) {
-                    return $this->editCurrentResponse('dm', $type, $content, $options);
+                    return $this->editCurrentResponse($channelID, $type, $content, $options);
                 } else {
                     return $this->message->author->createDM()->then(function ($channel) use ($content, $options) {
                         return $channel->send($content, $options);

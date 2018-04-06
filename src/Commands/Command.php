@@ -36,7 +36,7 @@ namespace CharlotteDunois\Livia\Commands;
  * @property string[]                                           $patterns           Regular expression triggers.
  * @property bool                                               $guarded            Whether the command is protected from being disabled.
  */
-abstract class Command {
+abstract class Command implements \Serializable {
     protected $client;
     
     protected $name;
@@ -229,6 +229,34 @@ abstract class Command {
     }
     
     /**
+     * @internal
+     */
+    function serialize() {
+        $vars = \get_object_vars($this);
+        
+        unset($vars['client']);
+        
+        return \serialize($vars);
+    }
+    
+    /**
+     * @internal
+     */
+    function unserialize($vars) {
+        if(\CharlotteDunois\Yasmin\Models\ClientBase::$serializeClient === null) {
+            throw new \Exception('Unable to unserialize a class without ClientBase::$serializeClient being set');
+        }
+        
+        $vars = \unserialize($vars);
+        
+        foreach($vars as $name => $val) {
+            $this->$name = $val;
+        }
+        
+        $this->client = \CharlotteDunois\Yasmin\Models\ClientBase::$serializeClient;
+    }
+    
+    /**
      * Checks if the user has permission to use the command.
      * @param \CharlotteDunois\Livia\CommandMessage|\CharlotteDunois\Yasmin\Models\Message  $message
      * @param bool                                                                          $ownerOverride  Whether the bot owner(s) will always have permission.
@@ -354,8 +382,8 @@ abstract class Command {
     
     /**
      * Enables or disables the command in a guild (or globally).
-     * @param string|\CharlotteDunois\Yasmin\Models\Guild|null  $guild  The guild instance or the guild ID.
-     * @param bool                                              $enabled
+     * @param string|int|\CharlotteDunois\Yasmin\Models\Guild|null  $guild    The guild instance or the guild ID.
+     * @param bool                                                  $enabled
      * @return bool
      * @throws \BadMethodCallException|\InvalidArgumentException
      */
@@ -379,15 +407,15 @@ abstract class Command {
     }
     
     /**
-     * Checks if the command is enabled in a guild (or globally).
-     * @param string|\CharlotteDunois\Yasmin\Models\Guild|null  $guild  The guild instance or the guild ID.
+     * Checks if the command is enabled in a guild or globally.
+     * @param \CharlotteDunois\Yasmin\Models\Guild|string|int|null  $guild  The guild instance or the guild ID, null for global.
      * @return bool
      * @throws \InvalidArgumentException
      */
     function isEnabledIn($guild) {
         if($guild !== null) {
             $guild = $this->client->guilds->resolve($guild);
-            return (!\array_key_exists($guild->id, $this->guildEnabled) || $this->guildEnabled[$guild->id]);
+            return ($this->globalEnabled && (!\array_key_exists($guild->id, $this->guildEnabled) || $this->guildEnabled[$guild->id]));
         }
         
         return $this->globalEnabled;

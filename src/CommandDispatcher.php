@@ -15,7 +15,7 @@ namespace CharlotteDunois\Livia;
  * @property \CharlotteDunois\Livia\LiviaClient        $client      The client which initiated the instance.
  * @property array                                     $inhibitors  Functions that can block commands from running.
  */
-class CommandDispatcher {
+class CommandDispatcher implements \Serializable {
     protected $client;
     
     protected $inhibitors = array();
@@ -47,6 +47,34 @@ class CommandDispatcher {
         }
         
         throw new \RuntimeException('Unknown property \CharlotteDunois\Livia\CommandDispatcher::'.$name);
+    }
+    
+    /**
+     * @internal
+     */
+    function serialize() {
+        $vars = \get_object_vars($this);
+        
+        unset($vars['client'], $vars['inhibitors']);
+        
+        return \serialize($vars);
+    }
+    
+    /**
+     * @internal
+     */
+    function unserialize($vars) {
+        if(\CharlotteDunois\Yasmin\Models\ClientBase::$serializeClient === null) {
+            throw new \Exception('Unable to unserialize a class without ClientBase::$serializeClient being set');
+        }
+        
+        $vars = \unserialize($vars);
+        
+        foreach($vars as $name => $val) {
+            $this->$name = $val;
+        }
+        
+        $this->client = \CharlotteDunois\Yasmin\Models\ClientBase::$serializeClient;
     }
     
     /**
