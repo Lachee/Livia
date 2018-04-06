@@ -330,9 +330,9 @@
                     bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_isEnabledIn">isEnabledIn</a>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild)
+                    <a href="#method_isEnabledIn">isEnabledIn</a>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|string|int|null $guild)
         
-                                            <p>Checks if the command is enabled in a guild (or globally).</p>                </div>
+                                            <p>Checks if the command is enabled in a guild or globally.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -370,7 +370,7 @@
                     bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setEnabledIn">setEnabledIn</a>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild, bool $enabled)
+                    <a href="#method_setEnabledIn">setEnabledIn</a>(string|int|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild, bool $enabled)
         
                                             <p>Enables or disables the command in a guild (or globally).</p>                </div>
                 <div class="col-md-2"></div>
@@ -576,7 +576,7 @@ array(
                     <h3 id="method_isEnabledIn">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L415">line 415</a></div>
         <code>                    bool
-    <strong>isEnabledIn</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild)
+    <strong>isEnabledIn</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|string|int|null $guild)
         </code>
     </h3>
     <div class="details">
@@ -584,15 +584,15 @@ array(
     
 
                     <div class="method-description">
-                                    <p>Checks if the command is enabled in a guild (or globally).</p>                                                </div>
+                                    <p>Checks if the command is enabled in a guild or globally.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null</td>
+                <td><abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|string|int|null</td>
                 <td>$guild</td>
-                <td>The guild instance or the guild ID.</td>
+                <td>The guild instance or the guild ID, null for global.</td>
             </tr>
             </table>
 
@@ -744,7 +744,7 @@ array(
                     <h3 id="method_setEnabledIn">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L390">line 390</a></div>
         <code>                    bool
-    <strong>setEnabledIn</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild, bool $enabled)
+    <strong>setEnabledIn</strong>(string|int|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild, bool $enabled)
         </code>
     </h3>
     <div class="details">
@@ -758,7 +758,7 @@ array(
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null</td>
+                <td>string|int|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null</td>
                 <td>$guild</td>
                 <td>The guild instance or the guild ID.</td>
             </tr>
