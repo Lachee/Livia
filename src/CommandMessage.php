@@ -55,7 +55,7 @@ class CommandMessage extends \CharlotteDunois\Yasmin\Models\ClientBase {
         
         try {
             return $this->message->__get($name);
-        } catch(\Exception $e) {
+        } catch (\Exception $e) {
             /* Continue regardless of error */
         }
         
@@ -292,7 +292,8 @@ class CommandMessage extends \CharlotteDunois\Yasmin\Models\ClientBase {
      * @param array   $options
      * @param bool    $fromEdit
      * @return \React\Promise\ExtendedPromiseInterface
-     * @throws \RangeException|\InvalidArgumentException
+     * @throws \RangeException
+     * @throws \InvalidArgumentException
      */
     protected function respond(string $type, string $content, array $options = array(), bool $fromEdit = false) {
         if($type === 'reply' && $this->message->channel->type === 'dm') {

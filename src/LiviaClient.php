@@ -41,7 +41,9 @@ class LiviaClient extends \CharlotteDunois\Yasmin\Client {
      *
      * @param \React\EventLoop\LoopInterface  $loop
      * @param array                           $options  Any Client Options.
-     * @throws \RuntimeException|\InvalidArgumentException
+     * @throws \Exception
+     * @throws \RuntimeException
+     * @throws \InvalidArgumentException
      */
     function __construct(?\React\EventLoop\LoopInterface $loop = null, array $options = array()) {
         if(!\array_key_exists('commandPrefix', $options)) {
@@ -205,7 +207,7 @@ class LiviaClient extends \CharlotteDunois\Yasmin\Client {
                 if($prefix !== 404 && $prefix !== '') {
                     return $prefix;
                 }
-            } catch(\BadMethodCallException $e) {
+            } catch (\BadMethodCallException $e) {
                 return $this->commandPrefix;
             }
         }
