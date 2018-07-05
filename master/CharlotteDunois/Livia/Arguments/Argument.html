@@ -231,7 +231,7 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_obtain">obtain</a>(<a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, $value, $promptLimit = \INF, array $prompts = array(), array $answers = array(), $valid = null)
+                    <a href="#method_obtain">obtain</a>(<a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, string|string[] $value, int|double $promptLimit = \INF, array $prompts = array(), array $answers = array(), bool|string|null $valid = null)
         
                                             <p>Prompts the user and obtains the value for the argument. Resolves with an array of ('value' => mixed, 'cancelled' => string|null, 'prompts' => Message[], 'answers' => Message[]). Cancelled can be one of user, time and promptLimit.</p>                </div>
                 <div class="col-md-2"></div>
@@ -309,7 +309,7 @@ array(
                     <h3 id="method_obtain">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Arguments/Argument.php#L178">line 178</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>obtain</strong>(<a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, $value, $promptLimit = \INF, array $prompts = array(), array $answers = array(), $valid = null)
+    <strong>obtain</strong>(<a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, string|string[] $value, int|double $promptLimit = \INF, array $prompts = array(), array $answers = array(), bool|string|null $valid = null)
         </code>
     </h3>
     <div class="details">
@@ -325,32 +325,32 @@ array(
                     <tr>
                 <td><a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a></td>
                 <td>$message</td>
-                <td></td>
+                <td>Message that triggered the command.</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string|string[]</td>
                 <td>$value</td>
-                <td></td>
+                <td>Pre-provided value(s).</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>int|double</td>
                 <td>$promptLimit</td>
-                <td></td>
+                <td>Maximum number of times to prompt for the argument.</td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$prompts</td>
-                <td></td>
+                <td>An array consisting of the prompts.</td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$answers</td>
-                <td></td>
+                <td>An array consisting of the answers.</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>bool|string|null</td>
                 <td>$valid</td>
-                <td></td>
+                <td>Whether the last retrieved value was valid.</td>
             </tr>
             </table>
 
