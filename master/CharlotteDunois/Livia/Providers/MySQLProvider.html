@@ -111,7 +111,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(<abbr title="React\MySQL\Connection">Connection</abbr> $db)
+                    <a href="#method___construct">__construct</a>(<abbr title="React\MySQL\ConnectionInterface">ConnectionInterface</abbr> $db)
         
                                             <p>Constructs a new instance.</p>                </div>
                 <div class="col-md-2"></div>
@@ -208,7 +208,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_runQuery">runQuery</a>(string $sql, array $parameters = array())
         
-                                            <p>Runs a SQL query. Resolves with the Command instance.</p>                </div>
+                                            <p>Runs a SQL query. Resolves with the QueryResult instance.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -232,7 +232,7 @@
                     <h3 id="method___construct">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/MySQLProvider.php#L28">line 28</a></div>
         <code>                    
-    <strong>__construct</strong>(<abbr title="React\MySQL\Connection">Connection</abbr> $db)
+    <strong>__construct</strong>(<abbr title="React\MySQL\ConnectionInterface">ConnectionInterface</abbr> $db)
         </code>
     </h3>
     <div class="details">
@@ -246,7 +246,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="React\MySQL\Connection">Connection</abbr></td>
+                <td><abbr title="React\MySQL\ConnectionInterface">ConnectionInterface</abbr></td>
                 <td>$db</td>
                 <td></td>
             </tr>
@@ -350,7 +350,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_destroy">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/MySQLProvider.php#L112">line 112</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/MySQLProvider.php#L109">line 109</a></div>
         <code>                    
     <strong>destroy</strong>()
         </code>
@@ -371,7 +371,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_get">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/MySQLProvider.php#L163">line 163</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/MySQLProvider.php#L160">line 160</a></div>
         <code>                    mixed
     <strong>get</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, string $key, mixed $defaultValue = null)
         </code>
@@ -504,7 +504,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_init">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/MySQLProvider.php#L123">line 123</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/MySQLProvider.php#L120">line 120</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>init</strong>(<a href="../../../CharlotteDunois/Livia/LiviaClient.html"><abbr title="CharlotteDunois\Livia\LiviaClient">LiviaClient</abbr></a> $client)
         </code>
@@ -544,7 +544,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_remove">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/MySQLProvider.php#L211">line 211</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/MySQLProvider.php#L204">line 204</a></div>
         <code>                    
     <strong>remove</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, string $key)
         </code>
@@ -580,7 +580,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_runQuery">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/MySQLProvider.php#L299">line 299</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/MySQLProvider.php#L288">line 288</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>runQuery</strong>(string $sql, array $parameters = array())
         </code>
@@ -590,7 +590,7 @@
     
 
                     <div class="method-description">
-                                    <p>Runs a SQL query. Resolves with the Command instance.</p>                                                </div>
+                                    <p>Runs a SQL query. Resolves with the QueryResult instance.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -624,7 +624,7 @@
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            <a href="https://github.com/bixuehujin/reactphp-mysql/blob/master/src/Command.php" target="_blank">https://github.com/bixuehujin/reactphp-mysql/blob/master/src/Command.php</a>
+                                            <a href="https://github.com/friends-of-reactphp/mysql/blob/master/src/QueryResult.php" target="_blank">https://github.com/friends-of-reactphp/mysql/blob/master/src/QueryResult.php</a>
                                     </td>
                 <td></td>
             </tr>
@@ -638,7 +638,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_set">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/MySQLProvider.php#L185">line 185</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/MySQLProvider.php#L182">line 182</a></div>
         <code>                    
     <strong>set</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, string $key, mixed $value)
         </code>
