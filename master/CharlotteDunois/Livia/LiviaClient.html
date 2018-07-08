@@ -229,18 +229,17 @@
     
 
                     <div class="method-description">
-                                    <p>Constructs a new Command Client. Additional available Client Options are as following:</p>                    <p><pre>
-array(
-  'commandPrefix' => string|null, (Default command prefix, null means only mentions will trigger the handling, defaults to l$)
-  'commandBlockedMessagePattern' => bool, (Whether command pattern maatches will send command blocked messages, defaults to true)
-  'commandEditableDuration' => int, (Time in seconds that command messages should be editable, defaults to 30)
-  'commandThrottlingMessagePattern' => bool, (Whether command pattern matches will send command throttling messages, defaults to true)
-  'nonCommandEditable' => bool, (Whether messages without commands can be edited to a command, defaults to true)
-  'unknownCommandResponse' => bool, (Whether the bot should respond to an unknown command, defaults to true)
-  'owners' => string[], (array of user IDs)
-  'invite' => string, (Invite URL to the bot's support server)
+                                    <p>Constructs a new Command Client. Additional available Client Options are as following:</p>                    <p><pre><code>array(
+  'commandPrefix' =&gt; string|null, (Default command prefix, null means only mentions will trigger the handling, defaults to l$)
+  'commandBlockedMessagePattern' =&gt; bool, (Whether command pattern maatches will send command blocked messages, defaults to true)
+  'commandEditableDuration' =&gt; int, (Time in seconds that command messages should be editable, defaults to 30)
+  'commandThrottlingMessagePattern' =&gt; bool, (Whether command pattern matches will send command throttling messages, defaults to true)
+  'nonCommandEditable' =&gt; bool, (Whether messages without commands can be edited to a command, defaults to true)
+  'unknownCommandResponse' =&gt; bool, (Whether the bot should respond to an unknown command, defaults to true)
+  'owners' =&gt; string[], (array of user IDs)
+  'invite' =&gt; string, (Invite URL to the bot's support server)
 )
-</pre>
+</code></pre>
 </p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>

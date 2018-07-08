@@ -414,31 +414,30 @@
     
 
                     <div class="method-description">
-                                    <p>Constructs a new Command. Info is an array as following:</p>                    <p><pre>
-array(
-  'name' => string,
-  'aliases' => string[], (optional)
-  'group' => string, (the ID of the command group)
-  'description => string,
-  'details' => string, (optional)
-  'format' => string, (optional)
-  'examples' => string[], (optional)
-  'guildOnly' => bool, (defaults to false)
-  'ownerOnly' => bool, (defaults to false)
-  'clientPermissions' => string[], (optional)
-  'userPermissions' => string[], (optional)
-  'nsfw' => bool, (defaults to false)
-  'throttling' => array, (associative array of array('usages' => int, 'duration' => int) - duration in seconds, optional)
-  'defaultHandling' => bool, (defaults to true)
-  'args' => array, (see \CharlotteDunois\Livia\Arguments\Argument - key can be the index instead, optional)
-  'argsPromptLimit' => int|\INF, (optional)
-  'argsType' => string, (one of 'single' or 'multiple', defaults to 'single')
-  'argsCount' => int, (optional)
-  'argsSingleQuotes' => bool, (optional)
-  'patterns' => string[], (Regular Expression strings, pattern matches don't get parsed for arguments, optional)
-  'guarded' => bool, (defaults to false)
+                                    <p>Constructs a new Command. Info is an array as following:</p>                    <p><pre><code>array(
+  'name' =&gt; string,
+  'aliases' =&gt; string[], (optional)
+  'group' =&gt; string, (the ID of the command group)
+  'description =&gt; string,
+  'details' =&gt; string, (optional)
+  'format' =&gt; string, (optional)
+  'examples' =&gt; string[], (optional)
+  'guildOnly' =&gt; bool, (defaults to false)
+  'ownerOnly' =&gt; bool, (defaults to false)
+  'clientPermissions' =&gt; string[], (optional)
+  'userPermissions' =&gt; string[], (optional)
+  'nsfw' =&gt; bool, (defaults to false)
+  'throttling' =&gt; array, (associative array of array('usages' =&gt; int, 'duration' =&gt; int) - duration in seconds, optional)
+  'defaultHandling' =&gt; bool, (defaults to true)
+  'args' =&gt; array, (see \CharlotteDunois\Livia\Arguments\Argument - key can be the index instead, optional)
+  'argsPromptLimit' =&gt; int|\INF, (optional)
+  'argsType' =&gt; string, (one of 'single' or 'multiple', defaults to 'single')
+  'argsCount' =&gt; int, (optional)
+  'argsSingleQuotes' =&gt; bool, (optional)
+  'patterns' =&gt; string[], (Regular Expression strings, pattern matches don't get parsed for arguments, optional)
+  'guarded' =&gt; bool, (defaults to false)
 )
-</pre>
+</code></pre>
 </p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
