@@ -123,11 +123,11 @@
                 <td></td>
             </tr>
                     <tr>
-                <td class="type" id="property_commandsPath">
-                                                                                string|null
+                <td class="type" id="property_commandsDirectories">
+                                                                                string[]
                 </td>
-                <td><a name="property_commandsPath" href="#property_commandsPath">$commandsPath</a></td>
-                <td class="last">Fully resolved path to the bot's commands directory.</td>
+                <td><a name="property_commandsDirectories" href="#property_commandsDirectories">$commandsDirectories</a></td>
+                <td class="last">List of fully resolved path to the bot's commands directories.</td>
                 <td></td>
             </tr>
                     <tr>
@@ -340,7 +340,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_addCommandsDirectory">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L545">line 545</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L546">line 546</a></div>
         <code>                    $this
     <strong>addCommandsDirectory</strong>(string $path)
         </code>
@@ -391,7 +391,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_findCommands">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L88">line 88</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L89">line 89</a></div>
         <code>                    <a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a>[]
     <strong>findCommands</strong>(string $searchString, bool $exact = false, <abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr> $message = null)
         </code>
@@ -443,7 +443,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_findGroups">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L137">line 137</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L138">line 138</a></div>
         <code>                    <a href="../../CharlotteDunois/Livia/Commands/CommandGroup.html"><abbr title="CharlotteDunois\Livia\Commands\CommandGroup">CommandGroup</abbr></a>[]
     <strong>findGroups</strong>(string $searchString, bool $exact = false)
         </code>
@@ -490,7 +490,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_registerCommand">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L222">line 222</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L223">line 223</a></div>
         <code>                    $this
     <strong>registerCommand</strong>(string|<a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> ...$command)
         </code>
@@ -545,7 +545,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_registerCommandsIn">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L267">line 267</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L268">line 268</a></div>
         <code>                    $this
     <strong>registerCommandsIn</strong>(string $path, bool|string $ignoreSameLevelFiles = false)
         </code>
@@ -601,7 +601,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_registerDefaultCommands">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L453">line 453</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L454">line 454</a></div>
         <code>                    
     <strong>registerDefaultCommands</strong>()
         </code>
@@ -633,7 +633,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_registerDefaultGroups">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L461">line 461</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L462">line 462</a></div>
         <code>                    
     <strong>registerDefaultGroups</strong>()
         </code>
@@ -665,7 +665,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_registerDefaultTypes">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L472">line 472</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L473">line 473</a></div>
         <code>                    
     <strong>registerDefaultTypes</strong>()
         </code>
@@ -697,7 +697,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_registerDefaults">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L443">line 443</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L444">line 444</a></div>
         <code>                    
     <strong>registerDefaults</strong>()
         </code>
@@ -729,7 +729,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_registerGroup">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L320">line 320</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L321">line 321</a></div>
         <code>                    $this
     <strong>registerGroup</strong>(<a href="../../CharlotteDunois/Livia/Commands/CommandGroup.html"><abbr title="CharlotteDunois\Livia\Commands\CommandGroup">CommandGroup</abbr></a>|array ...$group)
         </code>
@@ -784,7 +784,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_registerType">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L360">line 360</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L361">line 361</a></div>
         <code>                    $this
     <strong>registerType</strong>(<a href="../../CharlotteDunois/Livia/Types/ArgumentType.html"><abbr title="CharlotteDunois\Livia\Types\ArgumentType">ArgumentType</abbr></a>|string ...$type)
         </code>
@@ -839,7 +839,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_registerTypesIn">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L392">line 392</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L393">line 393</a></div>
         <code>                    $this
     <strong>registerTypesIn</strong>(string $path, bool|string $ignoreSameLevelFiles = false)
         </code>
@@ -895,7 +895,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_removeCommandsDirectory">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L564">line 564</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L565">line 565</a></div>
         <code>                    $this
     <strong>removeCommandsDirectory</strong>(string $path)
         </code>
@@ -946,7 +946,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_reregisterCommand">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L482">line 482</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L483">line 483</a></div>
         <code>                    
     <strong>reregisterCommand</strong>(<a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a>|string $command, <a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $oldCommand)
         </code>
@@ -993,7 +993,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_resolveCommand">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L176">line 176</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L177">line 177</a></div>
         <code>                    <a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a>
     <strong>resolveCommand</strong>(string|<a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a>|<a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $resolvable)
         </code>
@@ -1044,7 +1044,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_resolveCommandPath">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L519">line 519</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L520">line 520</a></div>
         <code>                    string
     <strong>resolveCommandPath</strong>(string $groupID, string $command)
         </code>
@@ -1100,7 +1100,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_resolveGroup">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L198">line 198</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L199">line 199</a></div>
         <code>                    <a href="../../CharlotteDunois/Livia/Commands/CommandGroup.html"><abbr title="CharlotteDunois\Livia\Commands\CommandGroup">CommandGroup</abbr></a>
     <strong>resolveGroup</strong>(string|<a href="../../CharlotteDunois/Livia/Commands/CommandGroup.html"><abbr title="CharlotteDunois\Livia\Commands\CommandGroup">CommandGroup</abbr></a>|<a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $resolvable)
         </code>
@@ -1151,7 +1151,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_unregisterCommand">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L503">line 503</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandRegistry.php#L504">line 504</a></div>
         <code>                    
     <strong>unregisterCommand</strong>(<a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command)
         </code>
