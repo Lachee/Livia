@@ -174,7 +174,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    void
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_reload">reload</a>()
@@ -192,6 +192,16 @@
                                             <p>Enables or disables the group in a guild.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unload">unload</a>()
+        
+                                            <p>Unloads all of the group's commands.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -200,7 +210,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/CommandGroup.php#L40">line 40</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/CommandGroup.php#L43">line 43</a></div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../CharlotteDunois/Livia/LiviaClient.html"><abbr title="CharlotteDunois\Livia\LiviaClient">LiviaClient</abbr></a> $client, string $id, string $name, bool $guarded = false, array $commands = null)
         </code>
@@ -253,7 +263,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isEnabledIn">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/CommandGroup.php#L128">line 128</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/CommandGroup.php#L134">line 134</a></div>
         <code>                    bool
     <strong>isEnabledIn</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild)
         </code>
@@ -304,8 +314,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_reload">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/CommandGroup.php#L140">line 140</a></div>
-        <code>                    
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/CommandGroup.php#L148">line 148</a></div>
+        <code>                    void
     <strong>reload</strong>()
         </code>
     </h3>
@@ -317,7 +327,25 @@
                                     <p>Reloads all of the group's commands.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
             
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/RuntimeException" target="_blank">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
             
                         
                         
@@ -327,7 +355,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setEnabledIn">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/CommandGroup.php#L103">line 103</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/CommandGroup.php#L109">line 109</a></div>
         <code>                    bool
     <strong>setEnabledIn</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild, bool $enabled)
         </code>
@@ -374,6 +402,47 @@
             </tr>
                     <tr>
                 <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unload">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/CommandGroup.php#L159">line 159</a></div>
+        <code>                    void
+    <strong>unload</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unloads all of the group's commands.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/RuntimeException" target="_blank">RuntimeException</a></td>
                 <td></td>
             </tr>
             </table>
